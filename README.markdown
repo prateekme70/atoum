@@ -125,11 +125,7 @@ You should get the following result, or something equivalent :
 	[S___________________________________________________________][1/1]
 	=> Test duration: 0.00 second.
 	=> Memory usage: 0.25 Mb.
-	> Total test duration: 0.00 second.
-	> Total test memory usage: 0.25 Mb.
-	> Code coverage value: 100.00%
-	> Running duration: 0.08 second.
-	> Success (1 test, 1 method, 2 assertions, 0 error, 0 exception) !
+	
 
 ### Step 6 : Complete your tests and restart the cycle from Step 3
 
@@ -168,7 +164,6 @@ However, if you want to further explore immediately *atoum*'s possibilities, we 
 
 * Running in your terminal, either the command `php mageekguy.atoum.phar -h`, or the command `php scripts/runner.php -h` ;
 * Exploring the contents of the `configurations` directory in *atoum*'s source, as it contains configuration file samples ;
-* Exploring the contents of the `tests/unit/classes` directory in *atoum*'s source, as it contains all of the unit tests ;
 * Read the [conference supports](http://www.slideshare.net/impossiblium/atoum-le-framework-de-tests-unitaires-pour-php-53-simple-moderne-et-intuitif) about it, available online ;
 * Read the (french) [wiki](https://github.com/mageekguy/atoum/wiki) ;
 * Join the IRC channel *##atoum* on the *freenode* network ; * Ask questions by e-mail at the address *support[AT]atoum(DOT)org* ;
@@ -193,7 +188,6 @@ The `suhosin` extension prevents executing PHAR archives, therefore its default 
 
 	suhosin.executor.include.whitelist="phar"
 
-Finally, if running *atoum* causes the screen to display characters looking like `???%`, this would be because the `detect_unicode` directive inside your `php.ini` file is set to 1.  
 To fix the problem, you just need to set it to 0 by editing your `php.ini` file or by running *atoum* with the following command :
 
 	# php -d detect_unicode=0 mageekguy.atoum.phar [options]
