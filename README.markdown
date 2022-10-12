@@ -11,11 +11,7 @@ However, it has been designed from the start with the following ideas in mind :
 
 To accomplish that, it massively uses capabilities provided by *PHP 5.3*, to give the developer *a whole new way* of writing unit tests.  
 Therefore, it can be installed and integrated inside an existing project extremely easily, since it is only a *single PHAR archive*, which is the one and only entry point for the developper.  
-Also, thanks to its *fluid interface*, it allows for writing unit tests in a fashion close to natural language.  
-It also makes it easier to implement stubbing within tests, thanks to intelligent uses of *anonymous functions and closures*.  
-*atoum* natively, and by default, performs the execution of each unit test within a separate [PHP](http://www.php.net) process, to warrant *isolation*.  
-Of course, it can be used seamlessly for continuous integration, and given its design, it can be made to cope with specific needs extremely easily.  
-*atoum* also accomplishes all of this without affecting performance, since it has been developped to boast a reduced memory footprint while allowing for hastened test execution.  
+
 It can also generate unit test execution reports in the Xunit format, which makes it compatible with continuous integration tools such as [Jenkins](http://jenkins-ci.org/).  
 *atoum* also generates code coverage reports, in order to make it possible to supervise unit tests.  
 Finally, even though it is developped mainly on UNIX, it can also work on Windows.  
@@ -171,7 +167,6 @@ However, if you want to further explore immediately *atoum*'s possibilities, we 
 * Exploring the contents of the `tests/unit/classes` directory in *atoum*'s source, as it contains all of the unit tests ;
 * Read the [conference supports](http://www.slideshare.net/impossiblium/atoum-le-framework-de-tests-unitaires-pour-php-53-simple-moderne-et-intuitif) about it, available online ;
 * Read the (french) [wiki](https://github.com/mageekguy/atoum/wiki) ;
-* Join the IRC channel *##atoum* on the *freenode* network ; * Ask questions by e-mail at the address *support[AT]atoum(DOT)org* ;
 
 ## Troubleshooting
 
@@ -204,4 +199,3 @@ You can also ask for help from the *atoum* development staff on the IRC channel 
 ### Error: Constant __COMPILER_HALT_OFFSET__ already defined /path/to/mageekguy.atoum.phar
 
 This error comes from the fact the *atoum* PHAR archive is included in at least one place within your code, using `include` or `require`.  
-To fix this problem, you just need to include the archive by using only `include_once` or `require_once`, in order to ensure it is not included several times.
